@@ -1,0 +1,768 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background: #f4f1ec;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  button {
+    font: inherit;
+  }
+  
+  
+  
+  /* ========================================
+     HEADER
+  ======================================== */
+  
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  
+    color: #fff;
+  }
+  
+  .header-container {
+    min-height: 88px;
+  
+    padding-left: clamp(24px, 4vw, 72px);
+    padding-right: clamp(24px, 4vw, 72px);
+  
+    display: flex;
+    align-items: center;
+  
+    position: relative;
+  }
+  
+  
+  
+  /* LOGO */
+  
+  .site-logo {
+    flex: 0 0 auto;
+  
+    display: flex;
+    align-items: center;
+  
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  
+    z-index: 2;
+  }
+  
+  .site-logo img {
+    width: auto;
+    height: 28px;
+    display: block;
+  }
+  
+  
+  
+  /* ========================================
+     DESKTOP NAV
+  ======================================== */
+  
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(24px, 2.5vw, 46px);
+  
+    margin-left: 55px;
+  }
+  
+  .desktop-nav .dropdown {
+    position: relative;
+  }
+  
+  
+  
+  /* Nav button */
+  
+  .nav-link-custom {
+    appearance: none;
+    border: 0;
+    background: transparent;
+  
+    color: #fff;
+  
+    padding: 32px 0;
+  
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+  
+    cursor: pointer;
+  
+    transition: opacity 0.25s ease;
+  }
+  
+  .nav-link-custom:hover {
+    opacity: 0.65;
+  }
+  
+  
+  
+  /* Bootstrap 기본 화살표 제거 */
+  
+  .nav-link-custom.dropdown-toggle::after {
+    display: none;
+  }
+  
+  
+  
+  /* ========================================
+     DESKTOP DROPDOWN
+  ======================================== */
+  
+  .desktop-nav .dropdown-menu {
+    min-width: 210px;
+  
+    margin-top: 0;
+  
+    padding: 18px 0;
+  
+    border: 0;
+    border-radius: 0;
+  
+    background: rgba(255, 255, 255, 0.97);
+  
+    box-shadow: none;
+  }
+  
+  .desktop-nav .dropdown-item {
+    padding: 9px 24px;
+  
+    color: #171717;
+  
+    font-size: 13px;
+    font-weight: 400;
+  
+    transition:
+      padding-left 0.25s ease,
+      opacity 0.25s ease;
+  }
+  
+  .desktop-nav .dropdown-item:hover {
+    background: transparent;
+  
+    padding-left: 30px;
+  
+    opacity: 0.6;
+  }
+  
+  
+  
+  /* ========================================
+     HEADER RIGHT
+  ======================================== */
+  
+  .header-utils {
+    margin-left: auto;
+  
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  
+    font-size: 13px;
+  }
+  
+  .header-utils a {
+    transition: opacity 0.25s ease;
+  }
+  
+  .header-utils a:hover {
+    opacity: 0.6;
+  }
+  
+  
+  
+  /* ========================================
+     MAIN VISUAL
+  ======================================== */
+  
+  .main-visual {
+    position: relative;
+  
+    width: 100%;
+    height: 100svh;
+    min-height: 720px;
+  
+    overflow: hidden;
+  }
+  
+  #mainVisualCarousel,
+  #mainVisualCarousel .carousel-inner,
+  #mainVisualCarousel .carousel-item {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  /* ========================================
+     SPLIT VISUAL
+  ======================================== */
+  
+  .visual-slide {
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+  }
+  
+  .visual-half {
+    position: relative;
+  
+    width: 50%;
+    height: 100%;
+  
+    overflow: hidden;
+  }
+  
+  .visual-half img {
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  
+  
+  /* 제품 이미지 포지션 필요 시 수정 */
+  
+  .visual-product img {
+    object-position: center center;
+  }
+  
+  
+  
+  /* 모델 이미지 포지션 */
+  
+  .visual-model img {
+    object-position: center center;
+  }
+  
+  
+  
+  /* ========================================
+     VISUAL COPY
+  ======================================== */
+  
+  .visual-copy {
+    position: absolute;
+  
+    top: 118px;
+    left: clamp(24px, 4vw, 72px);
+  
+    z-index: 3;
+  
+    max-width: 600px;
+  }
+  
+  .visual-small-title {
+    margin: 0 0 18px;
+  
+    font-size: 11px;
+    font-weight: 600;
+  
+    letter-spacing: 0.14em;
+  }
+  
+  .visual-copy h1,
+  .visual-copy h2 {
+    margin: 0;
+  
+    max-width: 650px;
+  
+    font-size: clamp(38px, 3.25vw, 62px);
+    line-height: 0.98;
+  
+    font-weight: 400;
+  
+    letter-spacing: -0.045em;
+  }
+  
+  .visual-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  
+    margin-top: 32px;
+  
+    padding-bottom: 4px;
+  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  
+    font-size: 13px;
+  
+    transition: opacity 0.25s ease;
+  }
+  
+  .visual-link:hover {
+    opacity: 0.6;
+  }
+  
+  
+  
+  /* ========================================
+     CAROUSEL CONTROLS
+  ======================================== */
+  
+  .visual-controls {
+    position: absolute;
+  
+    right: clamp(24px, 3vw, 55px);
+    bottom: 34px;
+  
+    z-index: 20;
+  
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  
+  
+  /* Bootstrap indicator 재설정 */
+  
+  .visual-controls .carousel-indicators {
+    position: static;
+  
+    display: flex;
+  
+    gap: 8px;
+  
+    margin: 0;
+  }
+  
+  .visual-controls .carousel-indicators button {
+    width: 38px;
+    height: 1px;
+  
+    margin: 0;
+  
+    border: 0;
+  
+    background-color: rgba(255, 255, 255, 0.4);
+  
+    opacity: 1;
+  
+    transition: width 0.35s ease;
+  }
+  
+  .visual-controls .carousel-indicators button.active {
+    width: 65px;
+  
+    background-color: #fff;
+  }
+  
+  
+  
+  /* Next */
+  
+  .visual-next {
+    width: 36px;
+    height: 36px;
+  
+    border: 0;
+  
+    background: transparent;
+    color: #fff;
+  
+    font-size: 21px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    cursor: pointer;
+  }
+  
+  
+  
+  /* ========================================
+     MOBILE MENU BUTTON
+  ======================================== */
+  
+  .mobile-menu-button {
+    margin-left: auto;
+  
+    width: 34px;
+    height: 28px;
+  
+    padding: 0;
+  
+    border: 0;
+    background: transparent;
+  
+    position: relative;
+  }
+  
+  .mobile-menu-button span {
+    position: absolute;
+  
+    left: 0;
+  
+    width: 100%;
+    height: 1px;
+  
+    background: #fff;
+  }
+  
+  .mobile-menu-button span:first-child {
+    top: 9px;
+  }
+  
+  .mobile-menu-button span:last-child {
+    top: 18px;
+  }
+  
+  
+  
+  /* ========================================
+     MOBILE OFFCANVAS
+  ======================================== */
+  
+  .mobile-offcanvas {
+    width: 100% !important;
+    max-width: none !important;
+  
+    height: 100dvh;
+  
+    border: 0 !important;
+  
+    background: #f3f0e9;
+  
+    color: #181818;
+  }
+  
+  
+  
+  /* offcanvas animation */
+  
+  .mobile-offcanvas.offcanvas-start {
+    transform: translateX(-100%);
+  }
+  
+  .mobile-offcanvas.show {
+    transform: none;
+  }
+  
+  
+  
+  /* Offcanvas Header */
+  
+  .mobile-offcanvas .offcanvas-header {
+    min-height: 80px;
+  
+    padding: 0 24px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mobile-logo {
+    font-size: 23px;
+    font-weight: 700;
+  
+    letter-spacing: -0.04em;
+  }
+  
+  
+  
+  /* Close */
+  
+  .mobile-close {
+    position: relative;
+  
+    width: 30px;
+    height: 30px;
+  
+    padding: 0;
+  
+    border: 0;
+    background: transparent;
+  }
+  
+  .mobile-close span {
+    position: absolute;
+  
+    top: 14px;
+    left: 3px;
+  
+    width: 24px;
+    height: 1px;
+  
+    background: #181818;
+  }
+  
+  .mobile-close span:first-child {
+    transform: rotate(45deg);
+  }
+  
+  .mobile-close span:last-child {
+    transform: rotate(-45deg);
+  }
+  
+  
+  
+  /* ========================================
+     MOBILE NAV
+  ======================================== */
+  
+  .mobile-offcanvas .offcanvas-body {
+    padding: 40px 24px 30px;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mobile-nav-accordion {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  
+  .mobile-nav-accordion .accordion-item {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  
+    border-radius: 0;
+  
+    background: transparent;
+  }
+  
+  .mobile-nav-accordion .accordion-button {
+    padding: 22px 0;
+  
+    border: 0;
+  
+    background: transparent;
+    color: #181818;
+  
+    box-shadow: none;
+  
+    font-size: clamp(25px, 7vw, 38px);
+    font-weight: 400;
+  
+    letter-spacing: -0.04em;
+  }
+  
+  .mobile-nav-accordion .accordion-button:not(.collapsed) {
+    background: transparent;
+    color: #181818;
+  
+    box-shadow: none;
+  }
+  
+  
+  
+  /* 기본 Bootstrap 아이콘 대신 + */
+  
+  .mobile-nav-accordion .accordion-button::after {
+    width: 18px;
+    height: 18px;
+  
+    background-image: none;
+  
+    content: "+";
+  
+    font-size: 23px;
+    font-weight: 300;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    transform: none;
+  }
+  
+  .mobile-nav-accordion .accordion-button:not(.collapsed)::after {
+    content: "−";
+  
+    transform: none;
+  }
+  
+  
+  
+  /* submenu */
+  
+  .mobile-nav-accordion .accordion-body {
+    padding: 0 0 24px;
+  }
+  
+  .mobile-nav-accordion .accordion-body a {
+    display: block;
+  
+    padding: 6px 0;
+  
+    font-size: 15px;
+  
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  
+  
+  /* Bottom links */
+  
+  .mobile-nav-footer {
+    margin-top: auto;
+  
+    padding-top: 40px;
+  
+    display: flex;
+    flex-wrap: wrap;
+  
+    gap: 12px 24px;
+  
+    font-size: 12px;
+  
+    text-transform: uppercase;
+  }
+  
+  
+  
+  /* ========================================
+     TABLET
+  ======================================== */
+  
+  @media (max-width: 991.98px) {
+  
+    .header-container {
+      min-height: 76px;
+  
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  
+    .site-logo {
+      font-size: 22px;
+    }
+  
+    .main-visual {
+      min-height: 650px;
+    }
+  
+  }
+  
+  
+  
+  /* ========================================
+     MOBILE
+  ======================================== */
+  
+  @media (max-width: 767.98px) {
+  
+    .main-visual {
+      height: 100svh;
+      min-height: 680px;
+    }
+  
+  
+    /*
+      모바일에서는 위/아래 이미지 배치
+      좌우 구조를 유지하고 싶으면
+      flex-direction: row 로 변경
+    */
+  
+    .visual-slide {
+      flex-direction: column;
+    }
+  
+    .visual-half {
+      width: 100%;
+      height: 50%;
+    }
+  
+  
+    .visual-copy {
+      top: 94px;
+      left: 22px;
+      right: 22px;
+  
+      max-width: none;
+    }
+  
+    .visual-small-title {
+      margin-bottom: 12px;
+  
+      font-size: 9px;
+    }
+  
+    .visual-copy h1,
+    .visual-copy h2 {
+      font-size: clamp(34px, 10vw, 48px);
+      line-height: 0.98;
+    }
+  
+    .visual-link {
+      margin-top: 22px;
+    }
+  
+  
+    .visual-controls {
+      right: 20px;
+      bottom: 20px;
+    }
+  
+    .visual-controls .carousel-indicators button {
+      width: 24px;
+    }
+  
+    .visual-controls .carousel-indicators button.active {
+      width: 45px;
+    }
+  
+  }
+  
+  
+  
+  /* ========================================
+     SMALL MOBILE
+  ======================================== */
+  
+  @media (max-width: 480px) {
+  
+    .header-container {
+      min-height: 70px;
+  
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  
+    .mobile-offcanvas .offcanvas-header {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  
+    .mobile-offcanvas .offcanvas-body {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  
+  }

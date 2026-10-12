@@ -4,394 +4,778 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Beauty Portfolio</title>
-  <!-- Bootstrap 5.3 CSS -->
+
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 
 <body>
- <!-- ====== HEADER ====== -->
-  <header class="site-header">
-    <div class="container-fluid header-container">
 
-      <!-- Logo -->
-      <a href="#" class="site-logo">
-        <!-- 나중에 이미지로 교체 -->
-        <span>BEAUTY</span>
-        <!-- 이미지 사용 시 아래처럼 교체
-        <img src="images/logo.svg" alt="Beauty Brand">
-        -->
-      </a>
+<!-- ====== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
 
+    <!-- LOGO -->
+    <a href="#" class="site-logo">
+      <span class="logo-text">BEAUTY</span>
+      <!--<img src="images/logo.svg" alt="Beauty Brand Logo">-->
+    </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="desktop-nav d-none d-lg-flex">
+    <!-- PC NAV -->
+    <nav class="desktop-nav d-none d-lg-flex">
+      <button class="desktop-nav-link active" type="button" data-mega="shopMenu">SHOP</button>
+      <button class="desktop-nav-link" type="button" data-mega="newMenu">NEW</button>
+      <button class="desktop-nav-link" type="button" data-mega="bestMenu">BEST SELLERS</button>
+      <button class="desktop-nav-link" type="button" data-mega="skinMenu">SKINCARE</button>
+      <button class="desktop-nav-link" type="button" data-mega="aboutMenu">ABOUT</button>
+    </nav>
 
-        <!-- SHOP -->
-        <div class="dropdown">
-          <button class="nav-link-custom dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Shop
-          </button>
+    <!-- PC RIGHT -->
+    <div class="header-right d-none d-lg-flex">
+      <button class="header-icon-btn search-trigger" type="button" aria-label="Search"><span class="search-icon"></span></button>
+      <a href="#" class="header-icon-btn heart-link" aria-label="Wishlist"><span class="heart-icon">♡</span></a>
+      <a href="#" class="header-icon-btn account-link" aria-label="Account"><span class="account-icon"></span></a>
+      <a href="#" class="header-icon-btn bag-link" aria-label="Cart"><span class="bag-count">0</span></a>
+    </div>
 
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">All Products</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Skincare</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Body Care</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Best Sellers</a>
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- ABOUT -->
-        <div class="dropdown">
-          <button class="nav-link-custom dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            About
-          </button>
-
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">Our Story</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Philosophy</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Brand Story</a>
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- PRODUCTS -->
-        <div class="dropdown">
-          <button class="nav-link-custom dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Products
-          </button>
-
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">Serum</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Cream</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Cleanser</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Mist</a>
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- STORY -->
-        <div class="dropdown">
-          <button class="nav-link-custom dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Story
-          </button>
-
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">Ingredients</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Journal</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Campaign</a>
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- COMMUNITY -->
-        <div class="dropdown">
-          <button class="nav-link-custom dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Community
-          </button>
-
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">News</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Events</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-
-      </nav>
-
-
-      <!-- Desktop Right Menu -->
-      <div class="header-utils d-none d-lg-flex">
-        <a href="#">Search</a>
-        <a href="#">Cart <span>0</span></a>
-      </div>
-
-
-      <!-- Mobile Hamburger -->
-      <button class="mobile-menu-button d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="메뉴 열기">
+    <!-- MOBILE RIGHT -->
+    <div class="mobile-header-right d-flex d-lg-none">
+      <a href="#" class="mobile-bag-link">0</a>
+      <button class="menu-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="메뉴 열기">
+        <span></span>
         <span></span>
         <span></span>
       </button>
-
     </div>
-  </header>
-
-
-
-  <!-- ====== MOBILE FULLSCREEN MENU ====== -->
-  <div class="offcanvas offcanvas-start mobile-offcanvas" tabindex="-1" id="mobileMenu">
-    <div class="offcanvas-header">
-      <div class="mobile-logo">
-        BEAUTY
-      </div>
-
-      <button type="button" class="mobile-close" data-bs-dismiss="offcanvas" aria-label="Close">
-        <span></span>
-        <span></span>
-      </button>
-
-    </div>
-
-
-    <div class="offcanvas-body">
-      <div class="accordion mobile-nav-accordion" id="mobileNavAccordion">
-
-        <!-- Shop -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileShop">
-              Shop
-            </button>
-
-          </h2>
-
-          <div id="mobileShop" class="accordion-collapse collapse" data-bs-parent="#mobileNavAccordion">
-            <div class="accordion-body">
-              <a href="#">All Products</a>
-              <a href="#">Skincare</a>
-              <a href="#">Body Care</a>
-              <a href="#">Best Sellers</a>
-            </div>
-          </div>
-
-        </div>
-
-
-        <!-- About -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileAbout">
-              About
-            </button>
-
-          </h2>
-
-          <div id="mobileAbout" class="accordion-collapse collapse" data-bs-parent="#mobileNavAccordion">
-            <div class="accordion-body">
-              <a href="#">Our Story</a>
-              <a href="#">Philosophy</a>
-              <a href="#">Brand Story</a>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- Products -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileProducts">
-              Products
-            </button>
-
-          </h2>
-
-          <div id="mobileProducts" class="accordion-collapse collapse" data-bs-parent="#mobileNavAccordion">
-            <div class="accordion-body">
-              <a href="#">Serum</a>
-              <a href="#">Cream</a>
-              <a href="#">Cleanser</a>
-              <a href="#">Mist</a>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- Story -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileStory">
-              Story
-            </button>
-
-          </h2>
-
-          <div id="mobileStory" class="accordion-collapse collapse" data-bs-parent="#mobileNavAccordion">
-            <div class="accordion-body">
-              <a href="#">Ingredients</a>
-              <a href="#">Journal</a>
-              <a href="#">Campaign</a>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- Community -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileCommunity">
-              Community
-            </button>
-
-          </h2>
-
-          <div id="mobileCommunity" class="accordion-collapse collapse" data-bs-parent="#mobileNavAccordion">
-            <div class="accordion-body">
-              <a href="#">News</a>
-              <a href="#">Events</a>
-              <a href="#">Contact</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="mobile-nav-footer">
-        <a href="#">Instagram</a>
-        <a href="#">Search</a>
-        <a href="#">Cart (0)</a>
-      </div>
-
-    </div>
-
   </div>
 
-
-
-  <!-- ====== MAIN VISUAL ====== -->
-  <main>
-    <section class="main-visual">
-      <div id="mainVisualCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
-
-        <!-- SLIDES -->
-        <div class="carousel-inner">
-
-          <!-- SLIDE 01 -->
-          <div class="carousel-item active">
-            <div class="visual-slide">
-
-              <!-- Left : Product -->
-              <div class="visual-half visual-product">
-                <img src="images/main-product-01.jpg" alt="Beauty product">
-                <div class="visual-copy">
-                  <p class="visual-small-title">NEW COLLECTION</p>
-                  <h1>
-                    Your skin,<br>
-                    in its purest form.
-                  </h1>
-
-                  <a href="#" class="visual-link">
-                    Discover
-                    <span>→</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Right : Model -->
-              <div class="visual-half visual-model">
-                <img src="images/main-model-01.jpg" alt="Beauty campaign model">
-              </div>
-            </div>
-          </div>
-
-          <!-- SLIDE 02 -->
-          <div class="carousel-item">
-            <div class="visual-slide">
-              <div class="visual-half visual-product">
-                <img src="images/main-product-02.jpg" alt="Beauty product">
-                <div class="visual-copy">
-                  <p class="visual-small-title">DAILY RITUAL</p>
-                  <h2>
-                    A quiet ritual<br>
-                    for every day.
-                  </h2>
-
-                  <a href="#" class="visual-link">
-                    Explore
-                    <span>→</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="visual-half visual-model">
-                <img src="images/main-model-02.jpg" alt="Beauty campaign model">
-              </div>
-            </div>
-          </div>
-
-          <!-- SLIDE 03 -->
-          <div class="carousel-item">
-            <div class="visual-slide">
-              <div class="visual-half visual-product">
-                <img src="images/main-product-03.jpg" alt="Beauty product">
-                <div class="visual-copy">
-                  <p class="visual-small-title">ESSENTIAL CARE</p>
-                  <h2>
-                    Less noise.<br>
-                    More balance.
-                  </h2>
-                  <a href="#" class="visual-link">
-                    Shop now
-                    <span>→</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="visual-half visual-model">
-                <img src="images/main-model-03.jpg" alt="Beauty campaign model">
-              </div>
-            </div>
-          </div>
+  <!-- ====== DESKTOP MEGA MENU ====== -->
+  <div class="desktop-mega-wrapper d-none d-lg-block">
+    <!-- SHOP -->
+    <div class="mega-menu" id="shopMenu">
+      <div class="mega-menu-inner">
+        <div class="mega-column">
+          <h3>BY CATEGORY</h3>
+          <a href="#">SHOP ALL</a>
+          <a href="#">TONER & PAD</a>
+          <a href="#">CLEANSER</a>
+          <a href="#">SERUM</a>
+          <a href="#">MOISTURIZER</a>
+          <a href="#">MASK</a>
+          <a href="#">EYE CARE</a>
+          <a href="#">LIP CARE</a>
+          <a href="#">BUNDLES & SETS</a>
         </div>
 
-        <!-- Bottom Right Indicators -->
-        <div class="visual-controls">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#mainVisualCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#mainVisualCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <buttontype="button" data-bs-target="#mainVisualCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <button class="visual-next" type="button" data-bs-target="#mainVisualCarousel" data-bs-slide="next" aria-label="다음 배너">
-            →
-          </button>
+        <div class="mega-column">
+          <h3>BY INGREDIENT</h3>
+          <a href="#">HYALURONIC ACID</a>
+          <a href="#">CICA</a>
+          <a href="#">COLLAGEN</a>
+          <a href="#">VITAMIN C</a>
+          <a href="#">CERAMIDE</a>
+        </div>
+
+        <div class="mega-column">
+          <h3>BY SKIN CONCERN</h3>
+          <a href="#">DRY SKIN</a>
+          <a href="#">SENSITIVE SKIN</a>
+          <a href="#">WEAKENED SKIN BARRIER</a>
+          <a href="#">FINE LINES & WRINKLES</a>
+          <a href="#">PORE & SKIN TEXTURE</a>
+          <a href="#">DARK SPOTS</a>
+        </div>
+
+        <div class="mega-promo">
+          <a href="#">
+            <div class="mega-image"><img src="images/menu-new.webp" alt="New Product"></div>
+            <p>New Product</p>
+          </a>
+        </div>
+        <div class="mega-promo">
+          <a href="#">
+            <div class="mega-image"><img src="images/menu-best.webp" alt="Best Product"></div>
+            <p>Best Product</p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- NEW -->
+    <div class="mega-menu" id="newMenu">
+      <div class="mega-menu-inner simple-mega">
+        <div class="mega-column">
+          <h3>NEW ARRIVALS</h3>
+          <a href="#">New Skincare</a>
+          <a href="#">New Body Care</a>
+          <a href="#">New Sets</a>
+        </div>
+        <div class="mega-column">
+          <h3>COLLECTION</h3>
+          <a href="#">Spring Collection</a>
+          <a href="#">Daily Essentials</a>
+          <a href="#">Limited Edition</a>
+        </div>
+        <div class="mega-promo">
+          <a href="#">
+            <div class="mega-image"><img src="images/menu-new-1.webp" alt="New Collection"></div>
+            <p>New Collection</p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BEST -->
+    <div class="mega-menu" id="bestMenu">
+      <div class="mega-menu-inner simple-mega">
+        <div class="mega-column">
+          <h3>BEST SELLERS</h3>
+          <a href="#">Top 10</a>
+          <a href="#">Best Serum</a>
+          <a href="#">Best Cream</a>
+          <a href="#">Best Cleanser</a>
+        </div>
+        <div class="mega-column">
+          <h3>POPULAR NOW</h3>
+          <a href="#">Hydration</a>
+          <a href="#">Barrier Care</a>
+          <a href="#">Brightening</a>
+        </div>
+        <div class="mega-promo">
+          <a href="#">
+            <div class="mega-image"><img src="images/menu-best-2.webp" alt="Best Seller"></div>
+            <p>Best Seller</p>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
 
-  </main>
+    <!-- SKINCARE -->
+    <div class="mega-menu" id="skinMenu">
+      <div class="mega-menu-inner simple-mega">
+        <div class="mega-column">
+          <h3>SKINCARE</h3>
+          <a href="#">Toner</a>
+          <a href="#">Serum</a>
+          <a href="#">Essence</a>
+          <a href="#">Cream</a>
+          <a href="#">Mask</a>
+        </div>
+        <div class="mega-column">
+          <h3>SKIN TYPE</h3>
+          <a href="#">Dry</a>
+          <a href="#">Oily</a>
+          <a href="#">Combination</a>
+          <a href="#">Sensitive</a>
+        </div>
+        <div class="mega-column">
+          <h3>CONCERN</h3>
+          <a href="#">Hydration</a>
+          <a href="#">Pores</a>
+          <a href="#">Texture</a>
+          <a href="#">Dark Spots</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="mega-menu" id="aboutMenu">
+      <div class="mega-menu-inner simple-mega">
+        <div class="mega-column">
+          <h3>ABOUT BEAUTY</h3>
+          <a href="#">Our Story</a>
+          <a href="#">Philosophy</a>
+          <a href="#">Ingredients</a>
+          <a href="#">Sustainability</a>
+        </div>
+        <div class="mega-column">
+          <h3>JOURNAL</h3>
+          <a href="#">Stories</a>
+          <a href="#">Campaign</a>
+          <a href="#">News</a>
+        </div>
+        <div class="mega-promo">
+          <a href="#">
+            <div class="mega-image"><img src="images/menu-about.webp" alt="About Beauty"></div>
+            <p>Our Philosophy</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== MOBILE OFFCANVAS ===== -->
+<div class="offcanvas offcanvas-start fullscreen-menu d-lg-none" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <a href="#" class="offcanvas-logo">BEAUTY</a>
+    <button type="button" class="menu-close" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="offcanvas-body">
+    <div class="accordion menu-accordion" id="menuAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuShop">SHOP</button></h2>
+        <div id="menuShop" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+          <div class="accordion-body">
+            <a href="#">All Products</a>
+            <a href="#">Toner & Pad</a>
+            <a href="#">Cleanser</a>
+            <a href="#">Serum</a>
+            <a href="#">Moisturizer</a>
+            <a href="#">Mask</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuNew">NEW</button></h2>
+        <div id="menuNew" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+          <div class="accordion-body">
+            <a href="#">New Arrivals</a>
+            <a href="#">New Skincare</a>
+            <a href="#">New Collection</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuBest">BEST SELLERS</button></h2>
+        <div id="menuBest" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+          <div class="accordion-body">
+            <a href="#">Top 10</a>
+            <a href="#">Best Serum</a>
+            <a href="#">Best Cream</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuSkin">SKINCARE</button></h2>
+        <div id="menuSkin" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+          <div class="accordion-body">
+            <a href="#">Dry Skin</a>
+            <a href="#">Sensitive Skin</a>
+            <a href="#">Barrier Care</a>
+            <a href="#">Brightening</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuAboutMobile">ABOUT</button></h2>
+        <div id="menuAboutMobile" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+          <div class="accordion-body">
+            <a href="#">Our Story</a>
+            <a href="#">Philosophy</a>
+            <a href="#">Journal</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-bottom-links">
+      <a href="#">Instagram</a>
+      <a href="#">Search</a>
+      <a href="#">Cart (0)</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ====== HERO ===== -->
+<main>
+  <section class="hero-section">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-inner">
+        <!-- SLIDE 01 -->
+        <div class="carousel-item active">
+          <div class="hero-slide">
+            <img src="images/main-visual-01.webp" alt="Beauty campaign visual" class="hero-image">
+            <div class="hero-overlay"></div>
+            <div class="hero-copy">
+              <p class="hero-kicker">DAILY BALANCE</p>
+              <h1>
+                YOUR SKIN,<br>
+                YOUR MOMENT
+              </h1>
+              <p class="hero-description">피부 본연의 균형을 위한 새로운 데일리 스킨케어 리추얼</p>
+              <a href="#" class="hero-button">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 02 -->
+        <div class="carousel-item">
+          <div class="hero-slide">
+            <img src="images/main-visual-02.webp" alt="Beauty campaign visual" class="hero-image">
+            <div class="hero-overlay"></div>
+            <div class="hero-copy">
+              <p class="hero-kicker">BEAUTY STYLING</p>
+              <h2>
+                GLOW,<br>
+                NATURALLY
+              </h2>
+              <p class="hero-description">가볍게 스며들고 오래 유지되는 생기있는 컬러감</p>
+              <a href="#" class="hero-button">DISCOVER</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PREV -->
+      <button class="carousel-control-prev hero-arrow hero-arrow-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="arrow-circle">←</span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <!-- NEXT -->
+      <button class="carousel-control-next hero-arrow hero-arrow-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="arrow-circle">→</span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Indicators -->
+      <div class="hero-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FEATURED PRODUCTS ===== -->
+<section class="featured-products-section">
+  <div class="featured-marquee">
+    <div class="featured-marquee-track">
+      <span>Beauty made simple. Beauty made simple. Beauty made simple. Beauty made simple. Beauty made simple.</span>
+      <span>Beauty made simple. Beauty made simple. Beauty made simple. Beauty made simple. Beauty made simple.</span>
+    </div>
+  </div>
+
+  <div class="container-fluid featured-products-wrap">
+    <div class="row g-4 align-items-stretch">
+      <!-- ITEM 01 -->
+      <div class="col-12 col-lg-4">
+        <div class="featured-image-box"><img src="images/product-feature-01.webp" alt="Featured Product 01"></div>
+      </div>
+      <!-- ITEM 02 -->
+      <div class="col-12 col-lg-4">
+        <div class="featured-image-box"><img src="images/product-feature-02.webp" alt="Featured Product 02"></div>
+      </div>
+      <!-- TEXT 01 -->
+      <div class="col-12 col-lg-4">
+        <div class="featured-text-box1">
+          <div>
+            <p class="featured-eyebrow">NEW</p>
+            <h2>Hydration<br>Routine</h2>
+            <p class="featured-desc">피부에 편안하게 스며드는 새로운 데일리 스킨케어 라인을 만나보세요.</p>
+          </div>
+          <a href="#" class="featured-btn1">VIEW MORE</a>
+        </div>
+      </div>
+      <!-- TEXT 02 -->
+      <div class="col-12 col-lg-4">
+        <div class="featured-text-box2">
+          <div>
+            <p class="featured-eyebrow">BEST SELLER</p>
+            <h2>Barrier Care<br>Essentials</h2>
+            <p class="featured-desc">민감하고 건조한 피부를 위한 베리어 케어 중심의 대표 제품을 소개합니다.</p>
+          </div>
+          <a href="#" class="featured-btn2">VIEW MORE</a>
+        </div>
+      </div>
+      <!-- ITEM 03 -->
+      <div class="col-12 col-lg-4">
+        <div class="featured-image-box"><img src="images/product-feature-03.webp" alt="Featured Product 03"></div>
+      </div>
+      <!-- ITEM 04 -->
+      <div class="col-12 col-lg-4">
+        <div class="featured-image-box"><img src="images/product-feature-04.webp" alt="Featured Product 04"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCT PICKS ===== -->
+<section class="product-picks-section">
+  <div class="container-fluid product-picks-container">
+    <!-- TITLE -->
+    <div class="product-picks-head">
+      <div>
+        <p class="makeup-category-kicker">DAILY COLLECTION</p>
+        <h2>BEAUTY PICKS</h2>
+      </div>
+      <a href="#" class="product-shop-all">Shop All <span>→</span></a>
+    </div>
+    <div class="product-picks-layout">
+
+      <!-- PROMOTION IMAGE -->
+      <div class="product-promo">
+        <a href="#" class="product-promo-link">
+          <img src="images/product-promo.webp" alt="Beauty Picks">
+        </a>
+      </div>
+
+      <!-- PRODUCT SLIDER -->
+      <div class="product-slider-area">
+        <div class="product-slider-viewport">
+          <div class="product-slider-track">
+
+            <!-- PRODUCT 01 -->
+            <article class="product-card">
+              <div class="product-image-box">
+                <div class="product-badges"><span class="badge-new">NEW</span><span class="badge-calm">CALMING</span></div>
+                <button class="product-wish" type="button" aria-label="Add to wishlist">♡</button>
+                <a href="#"><img src="images/product-01.webp" alt="Hydrating Control Serum"></a>
+              </div>
+              <div class="product-info">
+                <h3><a href="#">Toning Vitamin C Mask</a></h3>
+                <p class="product-description">Daily toning mask pack with Vitamin C for a bright complexion</p>
+                <div class="product-review"><span class="stars">★★★★★</span><span>5 reviews</span><span class="review-line"></span><span>No questions</span></div>
+                <p class="product-price">25,000원</p>
+              </div>
+            </article>
+
+            <!-- PRODUCT 02 -->
+            <article class="product-card">
+              <div class="product-image-box">
+                <div class="product-badges"><span class="badge-new">NEW</span><span class="badge-calm">CALMING</span></div>
+                <button class="product-wish" type="button" aria-label="Add to wishlist">♡</button>
+                <a href="#"><img src="images/product-02.webp" alt="Calming Control Mask"></a>
+              </div>
+              <div class="product-info">
+                <h3><a href="#">CALMING Control Mask</a></h3>
+                <p class="product-description">A soothing sheet mask for sensitive and dry skin</p>
+                <div class="product-review"><span class="stars">★★★★★</span><span>3 reviews</span><span class="review-line"></span><span>No questions</span></div>
+                <p class="product-price">25,000원</p>
+              </div>
+            </article>
+
+            <!-- PRODUCT 03 -->
+            <article class="product-card">
+              <div class="product-image-box">
+                <div class="product-badges"><span class="badge-calm">CALMING</span></div>
+                <button class="product-wish" type="button" aria-label="Add to wishlist">♡</button>
+                <a href="#"><img src="images/product-03.webp" alt="Barrier Cream"></a>
+              </div>
+              <div class="product-info">
+                <h3><a href="#">BARRIER Balance Cream</a></h3>
+                <p class="product-description">Lightweight soothing cream for daily barrier care</p>
+                <div class="product-review"><span class="stars">★★★★★</span><span>56 reviews</span><span class="review-line"></span><span>No questions</span></div>
+                <p class="product-price">22,000원</p>
+              </div>
+            </article>
+
+            <!-- PRODUCT 04 -->
+            <article class="product-card">
+              <div class="product-image-box">
+                <div class="product-badges"><span class="badge-best">BEST</span><span class="badge-hydrating">HYDRATING</span></div>
+                <button class="product-wish" type="button" aria-label="Add to wishlist">♡</button>
+                <a href="#"><img src="images/product-04.webp" alt="Deep Hydrating Serum"></a>
+              </div>
+              <div class="product-info">
+                <h3><a href="#">DEEP Hydrating Serum</a></h3>
+                <p class="product-description">A lightweight, hydrating daily serum for healthy, radiant skin</p>
+                <div class="product-review"><span class="stars">★★★★★</span><span>212 reviews</span><span class="review-line"></span><span>3 questions</span></div>
+                <p class="product-price">18,000원</p>
+              </div>
+            </article>
+
+            <!-- PRODUCT 05 -->
+            <article class="product-card">
+              <div class="product-image-box">
+                <div class="product-badges"><span class="badge-new">NEW</span></div>
+                <button class="product-wish" type="button" aria-label="Add to wishlist">♡</button>
+                <a href="#"><img src="images/product-05.webp" alt="Daily Toner"></a>
+              </div>
+              <div class="product-info">
+                <h3><a href="#">DAILY Balance Toner</a></h3>
+                <p class="product-description">Refreshing toner for smooth and comfortable skin</p>
+                <div class="product-review"><span class="stars">★★★★★</span><span>37 reviews</span><span class="review-line"></span><span>No questions</span></div>
+                <p class="product-price">16,000원</p>
+              </div>
+            </article>
+
+            <!-- PRODUCT 06 -->
+            <article class="product-card">
+              <div class="product-image-box">
+                <div class="product-badges"><span class="badge-hydrating">HYDRATING</span></div>
+                <button class="product-wish" type="button" aria-label="Add to wishlist">♡</button>
+                <a href="#"><img src="images/product-06.webp" alt="Moisture Cream"></a>
+              </div>
+              <div class="product-info">
+                <h3><a href="#">MOISTURE Daily Cream</a></h3>
+                <p class="product-description">A daily cream providing rich hydration for dry, tired skin</p>
+                <div class="product-review"><span class="stars">★★★★★</span><span>89 reviews</span><span class="review-line"></span><span>2 questions</span></div>
+                <p class="product-price">22,000원</p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+        <div class="product-slider-controls">
+          <div class="product-progress">
+            <div class="product-progress-thumb"></div>
+          </div>
+          <div class="product-arrows">
+            <button class="product-prev" type="button" aria-label="Previous products">←</button>
+            <button class="product-next" type="button" aria-label="Next products">→</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ===== MAKEUP CATEGORY ===== -->
+<section class="makeup-category-section">
+  <div class="container-fluid makeup-category-container">
+    <div class="makeup-category-head">
+      <div>
+        <p class="makeup-category-kicker">MAKEUP COLLECTION</p>
+        <h2>SHOP BY CATEGORY</h2>
+      </div>
+      <a href="#" class="makeup-category-all">VIEW ALL <span>→</span></a>
+    </div>
+
+    <div class="makeup-category-scroll">
+      <!-- FACE -->
+      <a href="#" class="makeup-category-card">
+        <div class="makeup-category-image">
+          <img src="images/makeup-face.webp" alt="Face Makeup">
+        </div>
+        <div class="makeup-category-label">
+          <span>FACE</span>
+        </div>
+      </a>
+      <!-- EYE -->
+      <a href="#" class="makeup-category-card">
+        <div class="makeup-category-image">
+          <img src="images/makeup-eye-1.webp" alt="Eye Makeup">
+        </div>
+        <div class="makeup-category-label">
+          <span>EYE</span>
+        </div>
+      </a>
+      <!-- LIP -->
+      <a href="#" class="makeup-category-card">
+        <div class="makeup-category-image">
+          <img src="images/makeup-lip.webp" alt="Lip Makeup">
+        </div>
+        <div class="makeup-category-label">
+          <span>LIP</span>
+        </div>
+      </a>
+      <!-- TOOLS -->
+      <a href="#" class="makeup-category-card">
+        <div class="makeup-category-image">
+          <img src="images/makeup-tools-2.webp" alt="Makeup Tools">
+        </div>
+        <div class="makeup-category-label">
+          <span>TOOLS</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== MAKEUP BEST ===== -->
+<section class="makeup-best-section">
+  <div class="container-fluid makeup-best-container">
+    <div class="makeup-category-head">
+      <div>
+        <p class="makeup-category-kicker">MAKE UP BEST SELLERS</p>
+        <h2>MAKE UP BEST</h2>
+      </div>
+    </div>
+    <!-- TOP -->
+    <div class="makeup-best-head">
+      <div class="makeup-best-title-wrap">
+        <h2 id="makeupBestTitle">FACE</h2>
+        <p id="makeupBestSubtitle">피부 결을 가볍게 정돈하는 매끈한 베이스와 생기 컬러</p>
+      </div>
+      <div class="makeup-best-nav-wrap">
+        <div class="nav makeup-best-nav" role="tablist">
+          <button class="makeup-best-tab active" data-bs-toggle="pill" data-bs-target="#bestFace" type="button" data-title="FACE" data-subtitle="피부 결을 가볍게 정돈하는 매끈한 베이스와 생기 컬러">FACE</button>
+          <button class="makeup-best-tab" data-bs-toggle="pill" data-bs-target="#bestEye" type="button" data-title="EYE" data-subtitle="섬세한 음영과 또렷한 포인트를 완성하는 아이 메이크업">EYE</button>
+          <button class="makeup-best-tab" data-bs-toggle="pill" data-bs-target="#bestLip" type="button" data-title="LIP" data-subtitle="가볍게 밀착되어 맑고 선명하게 물드는 데일리 립 컬러">LIP</button>
+          <button class="makeup-best-tab" data-bs-toggle="pill" data-bs-target="#bestTools" type="button" data-title="TOOLS" data-subtitle="메이크업의 완성도를 높여주는 섬세하고 실용적인 뷰티 툴">TOOLS</button>
+        </div>
+        <a href="#" class="makeup-category-all">VIEW ALL <span>→</span></a>
+      </div>
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="tab-content makeup-best-content">
+      <!-- ===== FACE ===== -->
+      <div class="tab-pane fade show active" id="bestFace">
+        <div class="makeup-best-layout">
+          <div class="makeup-best-main"><a href="#"><img src="images/best-face-main.webp" alt="Face Best Collection"></a></div>
+          <div class="makeup-best-products">
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-face-01.webp" alt="Face Product 01"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">BEST FACE</p>
+                <h3>Air Blur Cushion</h3>
+                <div class="makeup-best-price"><strong>20%</strong><span>28,800원</span><del>36,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.9 (리뷰 1,182)</span></div>
+              </div>
+            </a>
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-face-02.webp" alt="Face Product 02"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">SOFT MATTE</p>
+                <h3>Soft Blur Powder</h3>
+                <div class="makeup-best-price"><strong>15%</strong><span>22,100원</span><del>26,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.8 (리뷰 864)</span></div>
+              </div>
+            </a>
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-face-03.webp" alt="Face Product 03"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">NEW COLOR</p>
+                <h3>Melting Cream Blush</h3>
+                <div class="makeup-best-price"><strong>25%</strong><span>18,000원</span><del>24,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.9 (리뷰 723)</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== EYE ===== -->
+      <div class="tab-pane fade" id="bestEye">
+        <div class="makeup-best-layout">
+          <div class="makeup-best-main"><a href="#"><img src="images/best-eye-main.webp" alt="Eye Best Collection"></a></div>
+          <div class="makeup-best-products">
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-eye-01.webp" alt="Eye Product 01"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">BEST EYE</p>
+                <h3>Soft Mood Eye Palette</h3>
+                <div class="makeup-best-price"><strong>20%</strong><span>31,200원</span><del>39,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.9 (리뷰 946)</span></div>
+              </div>
+            </a>
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-eye-02.webp" alt="Eye Product 02"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">NEW</p>
+                <h3>Fine Detail Liner</h3>
+                <div class="makeup-best-price"><strong>10%</strong><span>14,400원</span><del>16,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.8 (리뷰 562)</span></div>
+              </div>
+            </a>
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-eye-03.webp" alt="Eye Product 03"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">DAILY</p>
+                <h3>Volume Curl Mascara</h3>
+                <div class="makeup-best-price"><strong>15%</strong><span>17,000원</span><del>20,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.9 (리뷰 1,324)</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== LIP ===== -->
+      <div class="tab-pane fade" id="bestLip">
+        <div class="makeup-best-layout">
+          <div class="makeup-best-main"><a href="#"><img src="images/best-lip-main.webp" alt="Lip Best Collection"></a></div>
+          <div class="makeup-best-products">
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-lip-01.webp" alt="Lip Product 01"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">BEST LIP</p>
+                <h3>Glow Melting Tint</h3>
+                <div class="makeup-best-price"><strong>20%</strong><span>15,200원</span><del>19,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.9 (리뷰 2,184)</span></div>
+              </div>
+            </a>
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-lip-02.webp" alt="Lip Product 02"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">NEW COLOR</p>
+                <h3>Velvet Blur Lip</h3>
+                <div class="makeup-best-price"><strong>15%</strong><span>16,150원</span><del>19,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.8 (리뷰 1,016)</span></div>
+              </div>
+            </a>
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-lip-03.webp" alt="Lip Product 03"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">GLOW</p>
+                <h3>Moisture Lip Balm</h3>
+                <div class="makeup-best-price"><strong>10%</strong><span>13,500원</span><del>15,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.9 (리뷰 634)</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TOOLS ===== -->
+      <div class="tab-pane fade" id="bestTools">
+        <div class="makeup-best-layout">
+          <div class="makeup-best-main"><a href="#"><img src="images/best-tools-main.webp" alt="Beauty Tools Collection"></a></div>
+          <div class="makeup-best-products">
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-tools-01.webp" alt="Tool Product 01"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">BEST TOOL</p>
+                <h3>Soft Touch Puff Set</h3>
+                <div class="makeup-best-price"><strong>20%</strong><span>9,600원</span><del>12,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.9 (리뷰 846)</span></div>
+              </div>
+            </a>
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-tools-02.webp" alt="Tool Product 02"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">PRO</p>
+                <h3>Essential Brush Set</h3>
+                <div class="makeup-best-price"><strong>15%</strong><span>28,900원</span><del>34,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.8 (리뷰 427)</span></div>
+              </div>
+            </a>
+            <a href="#" class="makeup-best-product">
+              <div class="makeup-best-thumb"><img src="images/best-tools-03.webp" alt="Tool Product 03"></div>
+              <div class="makeup-best-info">
+                <p class="makeup-best-label">DAILY TOOL</p>
+                <h3>Precision Eyelash Curler</h3>
+                <div class="makeup-best-price"><strong>10%</strong><span>12,600원</span><del>14,000원</del></div>
+                <div class="makeup-best-review"><span>★★★★★</span><span>4.9 (리뷰 592)</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -407,9 +791,46 @@
 
 
 
-  <!-- Bootstrap 5.3 JS -->
+
+
+
+
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-contact">
+      <a href="mailto:hello@beauty.com">hello@beauty.com</a>
+      <a href="tel:07012345678">070-1234-5678</a>
+      <span>Mon - Fri (10AM - 6PM)</span>
+      <span>Sat.Sun.Holiday Off</span>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="YouTube">YT</a>
+      <a href="#" aria-label="Kakao">KAKAO</a>
+    </div>
+  </div>
+  <div class="footer-brand">
+    <h2>Your own beautiful moment</h2>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BEAUTY <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a> <a href="#">Business Information</a> <span>Company: BEAUTY STUDIO</span> <span>Representative: NAME</span> <span>Business No. 000-00-00000</span> <span>Seoul, Republic of Korea</span></p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+  <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
   <script src="js/main.js"></script>
 </body>
+
 </html>
